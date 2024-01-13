@@ -1,3 +1,6 @@
+# To run:
+# wget -O - https://raw.githubusercontent.com/ayakzob/scripts/main/install-docker.sh | bash
+
 # Add Docker's official GPG key:
 sudo apt-get update
 sudo apt-get install ca-certificates curl gnupg
