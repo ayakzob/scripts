@@ -1,0 +1,14 @@
+influxdb:
+  api_version: 2
+  ssl: false
+  host: localhost
+  port: 9999
+  token: GENERATED_AUTH_TOKEN
+  organization: RANDOM_16_DIGIT_HEX_ID
+  bucket: homeassistant
+  max_retries: 5
+  precision: s
+  tags:
+    source: HA
+  tags_attributes:
+    - friendly_name
