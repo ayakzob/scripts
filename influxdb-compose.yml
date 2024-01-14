@@ -7,7 +7,7 @@ services:
     # - DOCKER_INFLUXDB_INIT_MODE=setup
     volumes:
       - /influxdbv2/data:/var/lib/influxdb2:rw
-      - /influxdbv2:/config/influxdb2:rw
+      - /influxdbv2/config:/etc/influxdb2:rw      
     ports:
       - "8086:8086"
   #telegraf:
