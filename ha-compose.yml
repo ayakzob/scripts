@@ -10,3 +10,5 @@ services:
     restart: unless-stopped
     privileged: true
     network_mode: host
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
