@@ -1,0 +1,14 @@
+# docker compose -f grafana-compose.yml up -d
+version: "3.8"
+services:
+  portainer:
+    image: portainer/portainer-ce:latest
+    user: "0"
+    container_name: portainer
+    restart: always
+    ports:
+     - '8000:8000'
+     - '9443:9443'
+    volumes:
+     - /portainer:/data
+     - /var/run/docker.sock:/var/run/docker.sock
