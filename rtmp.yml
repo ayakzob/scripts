@@ -8,5 +8,7 @@ services:
     restart: always
     ports:
       - 1935:1935
+      - 80:80
     volumes:
       - /rtmp:/rtmp
+      - ./rtmp.conf:/etc/nginx/nginx.conf
