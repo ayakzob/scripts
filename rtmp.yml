@@ -10,5 +10,5 @@ services:
       - 1935:1935
       - 80:80
     volumes:
-      - /rtmp:/rtmp
       - ./rtmp.conf:/etc/nginx/nginx.conf
+      - /mnt/usbcruzer/hls:/tmp/hls
