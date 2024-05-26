@@ -1,0 +1,16 @@
+version: "3.8"
+services:
+  netbootxyz:
+    container_name: netbootxyz
+    image: ghcr.io/netbootxyz/netbootxyz 
+    restart: unless-stopped
+    environment:
+     - MENU_VERSION=2.0.76 
+     - GF_INSTALL_PLUGINS=grafana-clock-panel
+    ports:
+     - '3333:3000'
+    volumes:
+     - /netbootxyz/config:/config 
+     - /netbootxyz/assets:/assets
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
