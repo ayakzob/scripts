@@ -7,7 +7,7 @@ services:
     restart: unless-stopped
     volumes:
       - /influxdbv2/data:/var/lib/influxdb2:rw
-      - /influxdbv2/config:/etc/influxdb2:rw
+      - /influxdbv2/config:/etc/influxdb2:rw 
     ports:
       - "8086:8086"
     extra_hosts:
