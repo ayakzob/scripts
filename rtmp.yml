@@ -1,14 +1,12 @@
 version: '3.1'
-
 services:
-
-  mongo:
+  rtmp:
     image: tiangolo/nginx-rtmp
     container_name: nginx-rtmp
     restart: always
     ports:
       - 1935:1935
-      - 80:80
+      - 82:80
     volumes:
       - ./rtmp.conf:/etc/nginx/nginx.conf
-      - /mnt/usbcruzer/hls:/tmp/hls
+      - /media/jmicron/rtmp:/tmp/rtmp
