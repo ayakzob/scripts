@@ -16,6 +16,7 @@ services:
       # WEBPASSWORD: 'set a secure password here or it will be random'
     # Volumes store your data between container upgrades
     volumes:
+      - './pi-hole.conf:/etc/resolv.conf'
       - '/pi-hole/etc-pihole:/etc/pihole'
       - '/pi-hole/etc-dnsmasq.d:/etc/dnsmasq.d'
     #   https://github.com/pi-hole/docker-pi-hole#note-on-capabilities
